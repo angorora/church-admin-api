@@ -2,6 +2,7 @@ using Data.Models;
 using Microsoft.EntityFrameworkCore;
 
 public class ChurchAdminContext : DbContext{
+   public ChurchAdminContext(DbContextOptions options) : base(options){}
    
    public DbSet<Congregant> Congregants { get; set; }
    public DbSet<FamilyFellowship> FamilyFellowships { get; set; }
